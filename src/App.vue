@@ -1,15 +1,19 @@
 <template>
-<div>
-    导航栏 |
-    <router-link to="/">Sherry</router-link>|
-    <router-link to="/sherry2">sherry2</router-link>
-</div>
-<hr />
 <router-view />
 </template>
 
-<script>
-export default {};
+<script lang="ts">
+import {
+    provide,
+    ref
+} from "vue";
+export default {
+    name: "App",
+    setup() {
+        const menuVisible = ref(false); //引入变量是否看到aside
+        provide('xxx', menuVisible) //标记为所有组件都可以使用
+    },
+};
 </script>
 
 <style></style>

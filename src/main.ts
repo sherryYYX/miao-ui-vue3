@@ -1,9 +1,11 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-import "./index.css";
+import "./index.scss";
 import { createWebHashHistory, createRouter } from "vue-router";
 import Sherry from "./components/Sherry.vue";
 import Sherry2 from "./components/Sherry2.vue";
+import Home from "./views/home.vue";
+import Doc from "./views/doc.vue";
 
 const history = createWebHashHistory();
 const router = createRouter({
@@ -11,11 +13,11 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      component: Sherry,
+      component: Home,
     },
     {
-      path: "/sherry2",
-      component: Sherry2,
+      path: "/doc",
+      component: Doc,
     },
   ],
 });
