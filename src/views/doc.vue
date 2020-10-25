@@ -35,11 +35,10 @@ export default {
         Topnav,
     },
     setup() {
-        const menuVisible = inject < Ref < boolean >> ("xxx");
-        console.log('doc menuVisible:' + menuVisible.value);
+        const menuVisible = inject < Ref < boolean >> ("menuVisible");
         return {
-            menuVisible
-        }
+            menuVisible,
+        };
     },
 };
 </script>
@@ -62,6 +61,13 @@ aside {
         >li {
             padding: 4px 0;
         }
+    }
+
+    @media (max-width: 500px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding-top: 70px;
     }
 }
 </style>
