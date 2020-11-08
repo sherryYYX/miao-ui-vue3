@@ -1,7 +1,7 @@
 <template>
   <div>
     <button><span>
-  我是switch
+  我是switch二等分我国vase
 </span></button>
   </div>
 </template>
